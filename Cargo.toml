@@ -1,0 +1,8 @@
+[package]
+name = "act"
+version = "0.1.0"
+authors = ["nacika <nacika.inscatolare@gmail.com>"]
+
+[dependencies]
+actix = "0.7"
+tokio = "0.1.13"
