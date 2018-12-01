@@ -10,7 +10,6 @@ impl Actor for SampleActor {
 
     fn started(&mut self, ctx: &mut Self::Context) {
         println!("I am SampleActor!");
-        thread::sleep(Duration::from_secs(3));
     }
 }
 
@@ -31,7 +30,7 @@ impl Handler<Mes> for SampleActor {
 impl Handler<Ping> for SampleActor {
     type Result = ();
 
-    fn handle(&mut self, msg: Ping, _: &mut Context<Self>) {
+    fn handle(&mut self, msg: Ping, ctx: &mut Context<Self>) {
         println!("pong");
     }
 }
